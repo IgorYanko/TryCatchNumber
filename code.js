@@ -49,15 +49,15 @@ function clickNumberButtonbt() {
   try {
     if (numberbt == "") {
       throw "Informe um valor";
-    } else if (numberbt < 5 || numberbt > 10) {
+    } else if (numberbt <= 5 || numberbt >= 10) {
       throw "Informe um valor maior que 5 e menor que 10";
     }
   } catch (erro) {
+    console.log("Erro! "+ erro)
     document.getElementById("outputnumberbt").innerHTML = erro;
-    if (erro == "Informe um valor maior que 5 e menor que 10")
-      alert("erro + erro javascript");
-  } finally {
-    if (numberbt > 5 || numberbt < 10) {
+  }
+  finally {
+    if (numberbt > 5 && numberbt < 10) {
       document.getElementById("outputnumberbt").innerHTML;
       alert("O número escolhido foi " + numberbt);
     }
